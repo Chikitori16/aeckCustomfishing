@@ -1,0 +1,38 @@
+# ========================================================
+# CUSTOM FISH - SPECIAL SPECIES CONFIGURATION
+# AECK.ONLINE EXCLUSIVE
+# ========================================================
+
+# Danh sách các loại cá đặc biệt
+# chance: Tỉ lệ xuất hiện (0.01 = 1%, 0.1 = 10%)
+# fixed-quality: Phẩm chất mặc định (godly, mythic, legendary, epic, rare, common)
+# material: Loại item trong Minecraft (COD, SALMON, TROPICAL_FISH, PUFFERFISH)
+
+special-fish:
+  - id: "ca_long_vuong"
+    material: "TROPICAL_FISH"
+    display-name: "&6&lCá Long Vương &e[Đặc Biệt]"
+    fixed-quality: "godly"
+    chance: 0.005 # 0.5% tỉ lệ xuất hiện
+
+  - id: "ca_ngu_dai_duong"
+    material: "COD"
+    display-name: "&b&lCá Ngừ Đại Dương"
+    fixed-quality: "epic"
+    chance: 0.02 # 2% tỉ lệ xuất hiện
+
+  - id: "ca_noc_doc"
+    material: "PUFFERFISH"
+    display-name: "&5&lCá Nóc Tử Thần"
+    fixed-quality: "mythic"
+    chance: 0.01 # 1% tỉ lệ xuất hiện
+
+  - id: "ca_hoi_vinh_cuu"
+    material: "SALMON"
+    display-name: "&a&lCá Hồi Vĩnh Cửu"
+    fixed-quality: "legendary"
+    chance: 0.015 # 1.5% tỉ lệ xuất hiện
+
+# Ghi chú: 
+# Nếu trúng cá đặc biệt, các chỉ số chiều dài/cân nặng vẫn được random 
+# để hiển thị trong Lore, nhưng giá tiền và phẩm chất sẽ lấy theo config này.
