@@ -1,0 +1,29 @@
+name: CustomFish
+version: 1.0
+main: online.aeck.customfish.CustomFish
+api-version: '1.21'
+author: AECK
+softdepend: [Vault]
+softdepend: [PlaceholderAPI]
+
+commands:
+  banca:
+    description: Menu ban ca AECK.ONLINE
+  muacauca:
+    description: Dieu chinh mua thoi tiet
+    permission: aeck.admin
+  topcauca:
+    description: Xem bang xep hang cau ca
+  fish:
+    description: Lenh quan tri plugin (Reload)
+    permission: aeck.admin
+  nangcapcan:
+    description: Nâng cấp linh kiện cần câu
+  kinhnghiemcauca:
+    description: Xem kinh nghiệm câu cá và điểm kỹ năng
+  kynangcauca:
+    description: Mở cây kỹ năng câu cá
+  nhiemvucauca:
+    description: Nhận nhiệm vụ câu cá
+  nvcauca:
+    description: Nhận nhiệm vụ câu cá (viết tắt)

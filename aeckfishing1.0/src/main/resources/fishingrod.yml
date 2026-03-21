@@ -1,0 +1,49 @@
+# fishingrod.yml
+# Cấu hình các loại cần câu và linh kiện
+rods:
+  - id: "rod_basic"
+    display-name: "&aCần Câu Cơ Bản"
+    damage: 10
+    speed: 1.0
+    crit-chance: 0.05
+    crit-damage: 2.0
+    line: "line_basic"
+    hook: "hook_basic"
+    bait: "bait_worm"
+  - id: "rod_legendary"
+    display-name: "&6Cần Câu Huyền Thoại"
+    damage: 25
+    speed: 1.5
+    crit-chance: 0.15
+    crit-damage: 3.0
+    line: "line_legendary"
+    hook: "hook_legendary"
+    bait: "bait_shiny"
+baits:
+lines:
+  - id: "line_basic"
+    max-weight: 50
+  - id: "line_legendary"
+    max-weight: 200
+  - id: "line_ultra"
+    max-weight: 500
+  - id: "line_magic"
+    max-weight: 1000
+hooks:
+  - id: "hook_basic"
+    fish-types: ["COD", "SALMON"]
+  - id: "hook_legendary"
+    fish-types: ["TROPICAL_FISH", "PUFFERFISH"]
+  - id: "hook_gold"
+    fish-types: ["COD", "SALMON", "TROPICAL_FISH"]
+  - id: "hook_diamond"
+    fish-types: ["PUFFERFISH", "SALMON"]
+baits:
+  - id: "bait_worm"
+    effect: "normal"
+  - id: "bait_shiny"
+    effect: "deep"
+  - id: "bait_magic"
+    effect: "rare"
+  - id: "bait_fish"
+    effect: "epic"
