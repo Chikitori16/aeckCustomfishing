@@ -1,0 +1,21 @@
+# Cấu hình nhiệm vụ câu cá
+quests:
+  - name: "Câu 10 cá"
+    description: "Câu đủ 10 cá bất kỳ để nhận thưởng."
+    targetFish: 10
+    rewardExp: 100
+    rewardItem: "DIAMOND"
+  - name: "Câu cá thần thoại"
+    description: "Câu được 1 cá thần thoại."
+    targetFish: 1
+    quality: "godly"
+    rewardExp: 500
+    rewardItem: "GOLDEN_APPLE"
+  - name: "Câu 5 cá hiếm"
+    description: "Câu đủ 5 cá hiếm (rare trở lên)."
+    targetFish: 5
+    minQuality: "rare"
+    rewardExp: 200
+    rewardItem: "EMERALD"
+# Thời gian làm mới nhiệm vụ (giờ)
+refresh-hours: 1

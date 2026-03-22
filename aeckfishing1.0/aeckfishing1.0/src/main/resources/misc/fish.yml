@@ -1,0 +1,150 @@
+# ===================================================
+#  fish.yml — Cau hinh ca tuy chinh cho CustomFish
+#
+#  Rarity        : trong so xuat hien (so cang lon ty le cang cao)
+#  Material      : ten Material cua Bukkit (COD, SALMON, TROPICAL_FISH, ...)
+#  Weight_Range  : [min_kg, max_kg]
+#  Length_Range  : [min_cm, max_cm]
+#  Price_Per_Kg  : gia moi kg (tong gia = gia_moi_kg x can_nang)
+#  Time_Required : DAY (tick 0-12000) | NIGHT (tick 13000-23000)
+#  Biomes           : danh sach Biome (theo Bukkit API). De trong = tat ca Biome.
+#  Lava_Only        : true = chi xuat hien khi cau tren dung nham
+#  Water_Only       : true = chi xuat hien khi cau duoi nuoc (mac dinh)
+#  Custom_Model_Data: so nguyen >= 1 de gan model tu resource pack (0 = khong dung)
+#  Commands_On_Catch: lenh chay khi bat duoc ca
+#    Placeholder    : %player% %fish% %weight% %length%
+# ===================================================
+
+Fish:
+
+  # ─── Ca nuoc thuong ─────────────────────────────────────────────────────────
+
+  Red_Snapper:
+    Display_Name: "&cCa Hong"
+    Rarity: 50
+    Material: "SALMON"
+    Custom_Model_Data: 0
+    Weight_Range: [1.5, 10.0]
+    Length_Range: [15.0, 50.0]
+    Price_Per_Kg: 50
+    Time_Required:
+      - "DAY"
+      - "NIGHT"
+    Biomes:
+      - "DEEP_OCEAN"
+      - "WARM_OCEAN"
+      - "OCEAN"
+    Water_Only: true
+    Lava_Only: false
+    Commands_On_Catch:
+      - "broadcast &e%player% vua cau duoc mot con %fish% nang %weight%kg!"
+
+  Clownfish:
+    Display_Name: "&6Ca He"
+    Rarity: 20
+    Material: "TROPICAL_FISH"
+    Custom_Model_Data: 0
+    Weight_Range: [0.1, 0.5]
+    Length_Range: [5.0, 15.0]
+    Price_Per_Kg: 120
+    Time_Required:
+      - "DAY"
+    Biomes:
+      - "WARM_OCEAN"
+    Water_Only: true
+    Lava_Only: false
+    Commands_On_Catch: []
+
+  Pufferfish:
+    Display_Name: "&eCa Noc"
+    Rarity: 10
+    Material: "PUFFERFISH"
+    Custom_Model_Data: 0
+    Weight_Range: [0.5, 3.0]
+    Length_Range: [10.0, 30.0]
+    Price_Per_Kg: 120
+    Time_Required:
+      - "NIGHT"
+    Biomes:
+      - "OCEAN"
+      - "DEEP_OCEAN"
+      - "WARM_OCEAN"
+    Water_Only: true
+    Lava_Only: false
+    Commands_On_Catch:
+      - "broadcast &c%player% da cau duoc mot con &e%fish% &c- Can than!"
+
+  Common_Cod:
+    Display_Name: "&fCa Tuyet"
+    Rarity: 80
+    Material: "COD"
+    Custom_Model_Data: 0
+    Weight_Range: [0.3, 4.0]
+    Length_Range: [10.0, 40.0]
+    Price_Per_Kg: 20
+    Time_Required:
+      - "DAY"
+      - "NIGHT"
+    Biomes:
+      - "OCEAN"
+      - "COLD_OCEAN"
+      - "DEEP_COLD_OCEAN"
+      - "DEEP_OCEAN"
+      - "FROZEN_OCEAN"
+      - "DEEP_FROZEN_OCEAN"
+    Water_Only: true
+    Lava_Only: false
+    Commands_On_Catch: []
+
+  # ─── Ca dung nham (Lava Only) ────────────────────────────────────────────────
+  # Nhung loai ca nay chi co the cau khi lava-fishing.enabled: true trong config.yml
+
+  Magma_Fish:
+    Display_Name: "&4&lCa Nham Thach"
+    Rarity: 30
+    Material: "SALMON"
+    # Vi du: dat Custom_Model_Data: 1001 neu resource pack co model cho SALMON:1001
+    Custom_Model_Data: 0
+    Weight_Range: [3.0, 20.0]
+    Length_Range: [30.0, 100.0]
+    Price_Per_Kg: 500
+    Time_Required:
+      - "DAY"
+      - "NIGHT"
+    Biomes: []
+    Water_Only: false
+    Lava_Only: true
+    Commands_On_Catch:
+      - "broadcast &c%player% &fda cau duoc mot con &4&lCa Nham Thach &fnang &c%weight%kg &f- Sieu hiem!"
+
+  Blaze_Eel:
+    Display_Name: "&6&lLuon Lua"
+    Rarity: 10
+    Material: "SALMON"
+    Custom_Model_Data: 0
+    Weight_Range: [5.0, 30.0]
+    Length_Range: [50.0, 150.0]
+    Price_Per_Kg: 1200
+    Time_Required:
+      - "NIGHT"
+    Biomes: []
+    Water_Only: false
+    Lava_Only: true
+    Commands_On_Catch:
+      - "broadcast &6%player% &fda cau duoc mot con &6&lLuon Lua &fhiem co - nang &6%weight%kg&f!"
+
+  Inferno_Carp:
+    Display_Name: "&c&lCa Chep Lua"
+    Rarity: 60
+    Material: "COD"
+    Custom_Model_Data: 0
+    Weight_Range: [1.0, 8.0]
+    Length_Range: [15.0, 60.0]
+    Price_Per_Kg: 250
+    Time_Required:
+      - "DAY"
+      - "NIGHT"
+    Biomes: []
+    Water_Only: false
+    Lava_Only: true
+    Commands_On_Catch: []
